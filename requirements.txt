@@ -5,3 +5,10 @@ pydantic[dotenv]
 sqlalchemy
 httpx
 tenacity
+pymupdf
+python-docx
+pyyaml
+sentence-transformers
+numpy
+pandas
+streamlit
