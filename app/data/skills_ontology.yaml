@@ -1,0 +1,39 @@
+languages:
+  - name: Python
+    aliases: [py, python3]
+  - name: Java
+    aliases: [jdk, jre]
+  - name: JavaScript
+    aliases: [js, node, "node.js", typescript, ts]
+  - name: SQL
+    aliases: [postgres, mysql, sqlite, t-sql]
+ml:
+  - name: Transformers
+    aliases: [llm, "large language model", gpt, bert, t5]
+  - name: Scikit-Learn
+    aliases: [sklearn, "scikit learn"]
+  - name: PyTorch
+    aliases: [torch, lightning]
+  - name: TensorFlow
+    aliases: [tf, keras]
+cloud:
+  - name: AWS
+    aliases: ["amazon web services", s3, ec2, lambda, iam, cloudwatch]
+  - name: Azure
+    aliases: [msazure]
+  - name: GCP
+    aliases: ["google cloud", bigquery, gcs, dataproc]
+devops:
+  - name: Docker
+    aliases: [container, containers]
+  - name: Kubernetes
+    aliases: [k8s]
+  - name: CI/CD
+    aliases: [cicd, github actions, gitlab ci]
+mle:
+  - name: ML Ops
+    aliases: [mlops, model ops]
+  - name: FastAPI
+    aliases: []
+  - name: REST APIs
+    aliases: [restful, web apis, http apis]
