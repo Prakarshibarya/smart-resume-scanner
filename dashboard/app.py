@@ -15,7 +15,6 @@ tab1, tab2, tab3, tab4 = st.tabs([
     "Explain Candidate"
 ])
 
-# ---------------------------- TAB 1: Upload Resume ----------------------------
 with tab1:
     st.subheader("Upload a Resume")
     f = st.file_uploader("Choose a resume (PDF/DOCX/TXT)", type=["pdf", "docx", "txt"])
@@ -32,7 +31,6 @@ with tab1:
         except Exception as e:
             st.error(f"Request error: {e}")
 
-# ---------------------------- TAB 2: Create Job ----------------------------
 with tab2:
     st.subheader("Create a Job Description")
     title = st.text_input("Job Title", "Machine Learning Engineer")
@@ -61,7 +59,6 @@ with tab2:
         except Exception as e:
             st.error(f"Request error: {e}")
 
-# ---------------------------- TAB 3: Shortlist Semantic ----------------------------
 with tab3:
     st.subheader("Get Semantic Shortlist")
 
@@ -108,7 +105,6 @@ with tab3:
         except Exception as e:
             st.error(f"Request error: {e}")
 
-# ---------------------------- TAB 4: Explain Candidate ----------------------------
 with tab4:
     st.subheader("Explain a Candidate (LLM Justification)")
 
