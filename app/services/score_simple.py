@@ -24,12 +24,10 @@ def simple_score(raw_text: str, must_have: List[str], min_years: int) -> Dict:
     mh = [s.lower() for s in (must_have or [])]
     found = []
     for skill in mh:
-        # match whole word/phrase loosely
         pattern = r'\b' + re.escape(skill) + r'\b'
         if re.search(pattern, rt, flags=re.I):
             found.append(skill)
         else:
-            # fallback: substring contains (handles 'aws-lambda' etc.)
             if skill in rt:
                 found.append(skill)
 
