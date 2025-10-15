@@ -7,7 +7,7 @@ from typing import Dict, List, Set
 _ONT_PATH = Path("app/data/skills_ontology.yaml")
 _ONTOLOGY = yaml.safe_load(_ONT_PATH.read_text(encoding="utf-8"))
 
-# Build a map of lowercase term -> canonical name
+
 _CANON: Dict[str, str] = {}
 for domain, items in _ONTOLOGY.items():
     for it in items:
@@ -27,7 +27,7 @@ def _normalize_skills(text: str) -> Set[str]:
 
     found: Set[str] = set()
 
-    # 1) phrase/alias matching (prefer multi-word first)
+   
     phrases = sorted(_CANON.keys(), key=lambda s: len(s), reverse=True)
     for p in phrases:
         # flexible word-boundary-ish match
@@ -38,7 +38,6 @@ def _normalize_skills(text: str) -> Set[str]:
     return found
 
 def _extract_years(text: str) -> float:
-    # finds patterns like "3 years", "5+ yrs", "2yr", etc.
     yrs = []
     for m in re.finditer(r"(\d+(?:\.\d+)?)\s*\+?\s*(?:years|year|yrs|yr)", text, flags=re.I):
         try:
@@ -54,7 +53,6 @@ def extract_structured(raw_text: str) -> Dict:
     skills = sorted(_normalize_skills(raw_text))
     years = _extract_years(raw_text)
 
-    # (simple placeholder) collect education lines mentioning university/college/institute
     edu = []
     for line in raw_text.splitlines():
         L = line.strip()
