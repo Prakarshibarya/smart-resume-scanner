@@ -6,5 +6,5 @@ class Job(Base):
     id = Column(Integer, primary_key=True, index=True)
     title = Column(String, index=True, nullable=False)
     jd_text = Column(Text, nullable=False)
-    requirements = Column(JSON, nullable=True)   # e.g., {"must_have": ["Python","AWS"], "min_years": 3}
-    embedding = Column(JSON, nullable=True)      # list[float]
+    requirements = Column(JSON, nullable=True)  
+    embedding = Column(JSON, nullable=True)      
