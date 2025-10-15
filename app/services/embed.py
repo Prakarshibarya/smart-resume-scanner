@@ -2,7 +2,7 @@ import os
 import numpy as np
 from sentence_transformers import SentenceTransformer
 
-# You can change the model via env var if you want
+
 _MODEL_NAME = os.getenv("EMBED_MODEL", "sentence-transformers/all-MiniLM-L6-v2")
 _model = SentenceTransformer(_MODEL_NAME)
 
