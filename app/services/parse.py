@@ -5,7 +5,7 @@ def txt_to_text(path: str) -> str:
 
 def pdf_to_text(path: str) -> str:
     try:
-        import fitz  # PyMuPDF
+        import fitz  
     except Exception as e:
         raise RuntimeError(f"PDF parsing requires PyMuPDF (pymupdf). Install it first. Inner: {e}")
     doc = fitz.open(path)
@@ -27,6 +27,5 @@ def any_to_text(path: str) -> str:
     if ext == ".pdf":
         return pdf_to_text(path)
     if ext in [".docx", ".doc"]:
-        # NOTE: .doc is best-effort; python-docx only fully supports .docx
         return docx_to_text(path)
     raise ValueError(f"Unsupported file type: {ext}. Use .txt, .pdf, or .docx")
