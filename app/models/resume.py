@@ -7,6 +7,6 @@ class Resume(Base):
     id = Column(Integer, primary_key=True, index=True)
     candidate_name = Column(String, index=True, nullable=True)
     raw_text = Column(Text, nullable=True)
-    structured = Column(JSON, nullable=True)   # e.g., {"skills":[], "experience_years_est": 3.0, "education":[]}
-    embedding = Column(JSON, nullable=True)    # list[float]
+    structured = Column(JSON, nullable=True)   
+    embedding = Column(JSON, nullable=True)    
     created_at = Column(DateTime, default=datetime.utcnow)
