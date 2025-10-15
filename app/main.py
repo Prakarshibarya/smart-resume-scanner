@@ -2,8 +2,8 @@ from fastapi import FastAPI
 from sqlalchemy import inspect
 from app.core.db import engine, Base
 
-from app.models.resume import Resume  # noqa
-from app.models.job import Job        # noqa
+from app.models.resume import Resume  
+from app.models.job import Job        
 
 from app.api import resumes
 from app.api import jobs   
