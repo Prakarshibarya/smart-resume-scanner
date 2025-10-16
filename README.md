@@ -1,7 +1,9 @@
-### Smart Resume Screener
+###  Smart Resume Screener
 
 An AI-powered resume parsing and job-fit analysis system built with **FastAPI**, **Streamlit**, and **Sentence-Transformers**.  
 It parses resumes (PDF/DOCX/TXT), extracts skills and experience, performs **semantic matching** against job descriptions, and produces **LLM-based explanations** — all while redacting personal information for privacy.
+
+---
 
 ## Demo Video link
 https://drive.google.com/file/d/1mWZNriPqdaOieNOsn7xUVugOb7M9cBwD/view?usp=drive_link
